@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        glow: "glow 15s ease-in-out infinite",
+      },
+      keyframes: {
+        glow: {
+          '0%, 100%': { },
+          '50%': { transform: 'rotate(5deg)' },
+        }
+      },
       colors: {
         'vera-blue': '#004D9E',
         'vera-orange': '#EF8D37',

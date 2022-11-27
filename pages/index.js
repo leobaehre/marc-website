@@ -1,6 +1,12 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import Header from '../components/header'
+import Jumbotron from '../components/jumbotron'
+
+// SVG BLOBS
+import Blob01 from '../public/blob1.svg'
+import Blob02 from '../public/blob2.svg'
 
 export default function Home() {
   return (
@@ -11,14 +17,9 @@ export default function Home() {
         <link rel="icon" href="/logo-color.svg" />
       </Head>
 
-      <main>
-       <Header/>
-       <div className=''>
-          <h1 className='text-9xl font-bold'>Marc</h1>
-          <h1 className='text-9xl font-bold italic'>De</h1>
-          <h1 className='text-9xl'>Krosse</h1>
-          <h2 className='text-5xl text-gray-600'>Concert Photographer</h2>
-       </div>
+      <main className="bg-black h-screen overflow-hidden">
+        <Header/>
+        <Jumbotron/>
       </main>
 
       <footer>
