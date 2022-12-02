@@ -5,6 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'azo-sans-web': ['azo-sans-web', 'sans-serif'],
+      'azo-sans-uber': ['azo-sans-uber', 'sans-serif'],
+    },
     extend: {
       animation: {
         glow: "glow 15s ease-in-out infinite",
@@ -19,6 +23,9 @@ module.exports = {
         'vera-blue': '#004D9E',
         'vera-orange': '#EF8D37',
       },
+      lineHeight: {
+        '12': '3rem',
+      }
     },
     
   },
