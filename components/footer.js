@@ -1,12 +1,10 @@
-// footer in center of page with text '© Marc de Krosse - VERA 2022 Maarten Perk, Leo Bähre & Oscar van Balen'
-
 export default function Footer() {
-    // div in center with tailwindcss
+  
     return (
       <>
         <div className="fixed inset-x-0 bottom-0">
             <div className="grid place-items-center text-white">
-                    <p className=" py-3">© Marc de Krosse - VERA 2022 Maarten Perk, Leo Bähre & Oscar van Balen</p>
+                    <p className="py-3">© Marc de Krosse - VERA 2022 Maarten Perk, Leo Bähre & Oscar van Balen</p>
             </div>
         </div>
       </>
