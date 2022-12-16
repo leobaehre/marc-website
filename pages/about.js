@@ -16,7 +16,7 @@ export default function About() {
       </Head>
       <main className="bg-black h-screen overflow-hidden">
         <Header />
-        <div className="pt-3 pl-16">
+        <div className="pt-8 pl-16">
           <h1 className="text-white font-10xl text-6xl font-azo-sans-web">
             Over Mij
           </h1>
@@ -46,7 +46,9 @@ export default function About() {
           <div className="pt-6">
             <Image src={Imaage} width={453} height={200} alt="a" />
 
-            <h2 className="text-white font-azo-sans-web text-6xl pt-6">Over VERA</h2>
+            <h2 className="text-white font-azo-sans-web text-6xl pt-6 ">
+              Over VERA
+            </h2>
 
             <p className="text-white font-azo-sans-web pt-6 pb-10">
               VERA is hét centrum van underground Popcultuur in Groningen, of
