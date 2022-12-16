@@ -40,7 +40,7 @@ export default function Header() {
           <Link href="about">Over Mij</Link>
         </li>
         <li>
-          <Link href="#">Contact</Link>
+          <Link href="contact">Contact</Link>
         </li>
         <li>
           <Link href="#">

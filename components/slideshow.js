@@ -8,7 +8,7 @@ import Image3 from "../images/MNO/Moon Duo, 06-05-2011.jpg"
 export default function Slideshow() {
 return (
     <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel">
-  <div class="carousel-inner relative w-full overflow-hidden">
+  <div class="carousel-inner relative w-full overflow-hidden justify-center items-center">
     <div class="carousel-item active relative float-left w-full">
       <Image
         src={Image1}
