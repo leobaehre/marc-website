@@ -3,7 +3,7 @@ import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Lul from "../public/lul.jpg";
-import Imaage from "../public/afbeelding.jpeg";
+import Imaage from "../public/i really nate higgers a lot.png";
 
 export default function About() {
   return (
@@ -16,28 +16,57 @@ export default function About() {
       </Head>
       <main className="bg-black h-screen overflow-hidden">
         <Header />
-        <h1 className="text-white font-10xl text-6xl font-azo-sans-web">
-          Over Mij
-        </h1>
-        <div className="grid grid-cols-2 px-20">
+        <div className="pt-3 pl-16">
+          <h1 className="text-white font-10xl text-6xl font-azo-sans-web">
+            Over Mij
+          </h1>
+        </div>
+        <div className="grid grid-cols-2 px-16">
           <div>
             <p className="text-white font-azo-sans-web pt-12 pb-10">
               Hallo, ik ben Marc de Krosse. Hier ga ik wat over mezelf
-              vertellen. <br /> Ik werk bij VERA, hier maak ik foto&graves en
-              filmpje&graves over verschillende bands. <br /> Vera heeft sinds
-              2001 een foto-groep.
-              <br /> Marc de Krosse zit hier al sinds het begin bij.
-              <br /> &graveik sta het liefst met mijn neus op de band. daarom
-              fotografeer ik graag kleine concerten.
+              vertellen.
+              <br />
+              {
+                "Ik werk bij VERA, hier maak ik foto's en filmpje's over verschillende bands."
+              }
+              <br /> Vera heeft sinds 2001 een foto-groep. Marc de Krosse zit
+              hier al sinds het begin bij.
+              <br />
+              {
+                '"ik sta het liefst met mijn neus op de band. daarom fotografeer ik graag kleine concerten.'
+              }
               <br /> Professionele fotografen moeten bij grote concerten vaak al
               heel snel weg,
-              <br /> bij dit soort bands blijf je gewoon de hele optreden.&grave
+              <br /> {'bij dit soort bands blijf je gewoon de hele optreden."'}
             </p>
-            <Image src={Lul} width={500} height={300} />
+            <Image src={Lul} width={500} height={300} alt="a" />
           </div>
 
-          <Image src={Imaage} width={300} height={600} />
+          <div className="pt-6">
+            <Image src={Imaage} width={453} height={200} alt="a" />
+
+            <h2 className="text-white font-azo-sans-web text-6xl pt-6">Over VERA</h2>
+
+            <p className="text-white font-azo-sans-web pt-6 pb-10">
+              VERA is hét centrum van underground Popcultuur in Groningen, of
+              zoals wij het graag noemen: Club voor de Internationale Pop
+              Underground.
+              <br />
+              We waren vroeger een studentenvereniging en zo kwamen we aan onze
+              naam Veri Et Recti Amici (echte en oprechte vrienden).
+              <br />
+              Tegenwoordig zijn we een volledig uitgeruste concertzaal waar veel
+              legendarische bands in hun beginjaren speelden.
+              <br />
+              Om er een paar te noemen: U2, Joy Division, Simple Minds, Nick
+              Cave, Henry Rollins, <br />
+              Sonic Youth, Soundgarden, Slayer, Nirvana, The White Stripes, At
+              The Drive-in, Mogwai.
+            </p>
+          </div>
         </div>
+
         <Footer />
       </main>
     </div>

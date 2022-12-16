@@ -31,10 +31,10 @@ export default function Header() {
           <Link href="#">Publicaties</Link>
         </li>
         <li>
-          <Link href="#">Foto&graves</Link>
+          <Link href="gallery">{"Foto's"}</Link>
         </li>
         <li>
-          <Link href="#">Video&graves</Link>
+          <Link href="#">{"Video's"}</Link>
         </li>
         <li>
           <Link href="about">Over Mij</Link>

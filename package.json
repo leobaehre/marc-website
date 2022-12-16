@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
+    "list-react-files": "^0.2.0",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-easy-swipe": "^0.0.22",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
