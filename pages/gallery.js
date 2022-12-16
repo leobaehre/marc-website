@@ -27,6 +27,7 @@ export default function Gallery() {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
         />
+        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js" async></script>
       </Head>
 
       <main className="bg-black overflow-hidden">
@@ -37,8 +38,6 @@ export default function Gallery() {
             Gallerij
           </h1>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
         <Slideshow />
         <GalleryBuilder />
 
