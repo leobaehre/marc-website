@@ -3,18 +3,40 @@ import Link from "next/link";
 
 import React, { useState } from "react";
 
+import { parseCookies, setCookie, destroyCookie } from 'nookies'
+
 import { Bars3Icon } from "@heroicons/react/24/solid";
 
 import Logo from "../public/logo.svg";
-import Flag from "../public/flag.png";
+import FlagNL from "../public/flag.png";
+import FlagEN from "../public/flag-united-kingdom.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(null);
   const [currentPage, SetCurrentPage] = useState(null);
+  const [language, SetLanguage] = useState("nl");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const handleLanguageChange = () => {
+
+    destroyCookie(null, 'language');
+
+    if (language === "nl") {
+      console.log("language is en");
+      SetLanguage("en");
+    } else {
+      console.log("language is nl");
+      SetLanguage("nl");
+    }
+
+    setCookie(null, 'language', language, {
+      maxAge: 30 * 24 * 60 * 60,
+      path: '/',
+    })
+  }
 
   return (
     <div className="relative z-10 container mx-auto p-2 flex flex-row items-center justify-between ">
@@ -22,36 +44,56 @@ export default function Header() {
         <Logo />
       </div>
       <ul className="hidden md:flex flex-row gap-10 items-center text-white text-sm">
-        <li className={currentPage == "Home" ? "font-bold" : ""}>
-          <Link href="/" onClick={() => SetCurrentPage("Home")}>
-            Home
-          </Link>
-        </li>
         <li>
-          <Link href="#">Publicaties</Link>
-        </li>
-        <li>
-          <Link href="gallery">{"Foto's"}</Link>
-        </li>
-        <li>
-          <Link href="#">{"Video's"}</Link>
-        </li>
-        <li>
-          <Link href="about">Over Mij</Link>
-        </li>
-        <li>
-          <Link href="contact">Contact</Link>
+          <Link href="/">{language === "nl" ? <a>Home</a> : <a>Home</a>}</Link>
         </li>
         <li>
           <Link href="#">
-            <Image
-              src={Flag}
-              alt="flag"
-              width={25}
-              height={25}
-              className=" mt-2"
-            />
+            {language === "nl" ? <a>Publicaties</a> : <a>Publications</a>}
           </Link>
+        </li>
+        <li>
+          <Link href="gallery">
+            {language === "nl" ? <a>{"Foto's"}</a> : <a>Gallery</a>}
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            {language === "nl" ? <a>{"Video's"}</a> : <a>Videos</a>}
+          </Link>
+        </li>
+        <li>
+          <Link href="about">
+            {language === "nl" ? <a>Over mij</a> : <a>About</a>}
+          </Link>
+        </li>
+        <li>
+          <Link href="contact" className="Hover:text-red">
+            Contact
+          </Link>
+        </li>
+        <li>
+          {language == "nl" ? (
+            <button onClick={() => handleLanguageChange()}>
+              <Image
+                src={FlagNL}
+                alt="flag"
+                width={25}
+                height={25}
+                className=" mt-2"
+              />
+            </button>
+          ) : (
+            <button onClick={() => handleLanguageChange()}>
+              <Image
+                src={FlagEN}
+                alt="flag"
+                width={25}
+                height={25}
+                className=" mt-2"
+              />
+            </button>
+          )}
         </li>
       </ul>
       <div className="block md:hidden text-white" onClick={toggleMenu}>

@@ -27,8 +27,8 @@ export default function Jumbotron() {
         </div>
         <div className="text-white p-2">
           <p>
-            Welcome on this website here you see the videos and photos that Marc
-            de Krosse made at Vera concerts
+            Welcome on this website. here you see the videos and photos that
+            Marc de Krosse made at Vera concerts.
           </p>
         </div>
       </div>
