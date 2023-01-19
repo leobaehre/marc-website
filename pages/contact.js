@@ -4,7 +4,7 @@ import Header from "../components/header";
 
 import Image from "next/image";
 
-import ContactForm from "../components/contactform";
+import Form from "../components/form";
 
 export default function Contact() {
   return (
@@ -18,7 +18,17 @@ export default function Contact() {
 
       <main className="bg-black overflow-hidden">
         <Header />
-        <ContactForm />
+        <div className="min-h-screen p-8 px-48">
+          <h1 className="text-3xl font-medium mb-4 text-white">
+            Neem contact met mij op
+          </h1>
+          <p className="mb-8 text-white">
+            Heb jij een vraag of wil je gewoon hallo zeggen? Vul dan dit form
+            uit en we zullen zo snel mogelijk met u in contact komen.
+          </p>
+          <Form />
+        </div>
+
         <Footer />
       </main>
 
