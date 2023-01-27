@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import { parseCookies, setCookie, destroyCookie } from 'nookies'
+import { parseCookies, setCookie, destroyCookie } from "nookies";
 
 import { Bars3Icon } from "@heroicons/react/24/solid";
 
@@ -12,43 +12,49 @@ import FlagNL from "../public/flag.png";
 import FlagEN from "../public/flag-united-kingdom.png";
 
 export default function Header() {
+  /*
+  useEffect(() => {
+    const cookies = parseCookies();
+  }, []);
+
+*/
   const [menuOpen, setMenuOpen] = useState(null);
   const [currentPage, SetCurrentPage] = useState(null);
-  const [language, SetLanguage] = useState("nl");
+  const [language, SetLanguage] = useState(/*cookies.language || */ "nl");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   const handleLanguageChange = () => {
-
-    destroyCookie(null, 'language');
-
     if (language === "nl") {
       console.log("language is en");
       SetLanguage("en");
+      setCookie(null, "language", "en", {
+        maxAge: 30 * 24 * 60 * 60,
+        path: "/",
+      });
     } else {
       console.log("language is nl");
       SetLanguage("nl");
+      setCookie(null, "language", "en", {
+        maxAge: 30 * 24 * 60 * 60,
+        path: "/",
+      });
     }
-
-    setCookie(null, 'language', language, {
-      maxAge: 30 * 24 * 60 * 60,
-      path: '/',
-    })
-  }
+  };
 
   return (
     <div className="relative z-10 container mx-auto p-2 flex flex-row items-center justify-between ">
-      <div className="">
+      <Link href="/">
         <Logo />
-      </div>
+      </Link>
       <ul className="hidden md:flex flex-row gap-10 items-center text-white text-sm">
         <li>
           <Link href="/">{language === "nl" ? <a>Home</a> : <a>Home</a>}</Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="publicaties">
             {language === "nl" ? <a>Publicaties</a> : <a>Publications</a>}
           </Link>
         </li>

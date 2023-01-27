@@ -3,11 +3,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 
 import Image from "next/image";
-
-import Form from "../components/form";
-import Map from "../components/map";
-
-export default function Contact() {
+export default function Publicaties() {
   return (
     <div>
       <Head>
@@ -19,17 +15,7 @@ export default function Contact() {
 
       <main className="bg-black overflow-hidden">
         <Header />
-        <div className="min-h-screen p-8 px-48">
-          <h1 className="text-3xl font-medium mb-4 text-white">
-            Neem contact met mij op
-          </h1>
-          <p className="mb-8 text-white">
-            Heb jij een vraag of wil je gewoon hallo zeggen? Vul dan dit form
-            uit en ik zal zo snel mogelijk met u in contact komen.
-          </p>
-          <Form />
-          <Map />
-        </div>
+        <h1 class="text-white text-left pt-32 ml-64">Publicaties</h1>
 
         <Footer />
       </main>

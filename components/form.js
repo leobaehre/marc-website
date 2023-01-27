@@ -15,8 +15,14 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add code to handle form submission here
-    console.log(formData);
+    window.open(
+      "mailto:m.j.de.krosse@o2g2.nl?subject=Email%20van%20" +
+        formData.name +
+        "&body=" +
+        formData.message +
+        "%0D%0AIk zou graag antwoord willen via: " +
+        formData.email
+    );
   };
 
   return (
@@ -37,7 +43,7 @@ export default function Form() {
       </div>
       <div className="mb-4">
         <label className="block text-gray-700 font-medium mb-2" htmlFor="email">
-          Email
+          Email voor antwoord
         </label>
         <input
           className="border border-gray-400 p-2 rounded-lg w-full"
@@ -64,7 +70,7 @@ export default function Form() {
         />
       </div>
       <button className="bg-vera-blue text-white p-2 rounded-lg hover:bg-sky-600">
-        Submit
+        Verzenden
       </button>
     </form>
   );
