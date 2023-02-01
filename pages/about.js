@@ -15,7 +15,7 @@ export default function About() {
         <link rel="icon" href="/logo-color.svg" />
         <link rel="stylesheet" href="https://use.typekit.net/qjb8mfi.css" />
       </Head>
-      <main className="bg-black h-screen overflow-hidden">
+      <main className="relative bg-black h-screen overflow-hidden">
         <Background />
         <Header />
         <div className="relative grid grid-cols-2 gap-4 pt-6">
