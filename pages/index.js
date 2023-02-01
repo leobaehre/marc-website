@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Background from "../components/background";
 import Footer from "../components/footer";
 
 import Header from "../components/header";
@@ -7,9 +8,7 @@ import Jumbotron from "../components/jumbotron";
 import LatestWorkCard from "../components/latestWorkCard";
 import Videos from "../components/videos";
 
-// SVG BLOBS
-import Blob01 from "../public/blob1.svg";
-import Blob02 from "../public/blob2.svg";
+
 
 export default function Home() {
   return (
@@ -21,13 +20,18 @@ export default function Home() {
         <link rel="stylesheet" href="https://use.typekit.net/qjb8mfi.css" />
       </Head>
 
-      <main className="bg-black h-screen overflow-hidden">
+      <main className="relative bg-black h-screen overflow-hidden">
+        <Background />
+
         <Header />
         <Jumbotron />
-        <div className="relative z-10 container mx-auto my-2 p-2 flex flex-col lg:flex-row gap-2 flex-between justify-between">
+
+        <div className="relative z-10 container mx-auto flex flex-col md:flex-row gap-64 flex-between justify-between pt-8 h-[60%]">
           <LatestWorkCard />
           <Videos />
         </div>
+        
+       
         <Footer />
       </main>
 

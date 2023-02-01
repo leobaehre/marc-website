@@ -1,3 +1,5 @@
+const path = require('path')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -19,5 +21,18 @@ module.exports = {
     })
 
     return config
+  },
+
+  
+  exportPathMap: async function () {
+    return {
+      '/images/[folder]': { page: '/images/[folder]' },
+      '/images/[folder]/[image]': { page: '/images/[folder]/[image]' }
+    }
+
+  },
+
+  serverRuntimeConfig: {
+    imageFolders: 'images'
   },
 }

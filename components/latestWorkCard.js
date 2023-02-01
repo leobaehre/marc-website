@@ -1,14 +1,12 @@
-import Image from "next/image";
-
-import LatestWork from "../public/latestwork.png";
+import LatestWork from "../public/latestwork.jpg";
 
 export default function LatestWorkCard() {
-  // div in center with tailwindcss
   return (
     <>
-      <div className="relative z-10 mx-auto my-2 p-2 flex flex-row flex-between h-96">
-        <Image src={LatestWork} alt="a"/>
+      <div className="overflow-hidden rounded-lg">
+        <img className="object-cover" src={LatestWork.src} alt="a"/>
       </div>
     </>
   );
 }
+
