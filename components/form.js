@@ -20,10 +20,9 @@ export default function Form() {
   };
 
   return (
-    <form className="bg-white p-6 rounded-lg shadow-md" onSubmit={handleSubmit}>
-      <h2 className="text-lg font-medium mb-4">Contact Us</h2>
+    <form onSubmit={handleSubmit}>
       <div className="mb-4">
-        <label className="block text-gray-700 font-medium mb-2" htmlFor="name">
+        <label className="block text-white font-medium mb-2" htmlFor="name">
           Naam
         </label>
         <input
@@ -36,11 +35,11 @@ export default function Form() {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 font-medium mb-2" htmlFor="email">
+        <label className="block text-white font-medium mb-2" htmlFor="email">
           Email
         </label>
         <input
-          className="border border-gray-400 p-2 rounded-lg w-full"
+          className="border border-white p-2 rounded-lg w-full"
           type="email"
           id="email"
           name="email"
@@ -50,21 +49,21 @@ export default function Form() {
       </div>
       <div className="mb-4">
         <label
-          className="block text-gray-700 font-medium mb-2"
+          className="block text-white font-medium mb-2"
           htmlFor="message"
         >
           Bericht
         </label>
         <textarea
-          className="border border-gray-400 p-2 rounded-lg w-full"
+          className="border border-white p-2 rounded-lg w-full"
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
         />
       </div>
-      <button className="bg-vera-blue text-white p-2 rounded-lg hover:bg-sky-600">
-        Submit
+      <button className="bg-vera-blue text-white p-2 rounded-lg hover:bg-vera-orange">
+        Versturen
       </button>
     </form>
   );
