@@ -7,7 +7,17 @@ import Image from "next/image";
 import GalleryBuilder from "../components/gallerybuilder";
 import Slideshow from "../components/slideshow";
 
+import Disk from "../public/music-disk.jpg";
+
 export default function Gallery() {
+  const disks = [];
+
+  for (let i = 0; i < 16; i++) {
+    disks.push(Disk);
+  }
+
+  console.log(disks);
+
   return (
     <div>
       <Head>
@@ -21,13 +31,12 @@ export default function Gallery() {
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
         />
-        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js" async></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"
+          async
+        ></script>
       </Head>
 
       <main className="bg-black overflow-hidden">
@@ -38,8 +47,22 @@ export default function Gallery() {
             Gallerij
           </h1>
         </div>
-        <Slideshow />
-        <GalleryBuilder />
+
+        <div className="grid grid-cols-4 gap-4">
+          {disks.map((value, index) => {
+            return (
+              <>
+                <div className="w-4 h-4"></div>
+                <Image
+                  src={value.src}
+                  alt="disk ${index}"
+                  height={200}
+                  width={200}
+                />
+              </>
+            );
+          })}
+        </div>
 
         <Footer />
       </main>
