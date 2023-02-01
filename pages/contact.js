@@ -5,6 +5,7 @@ import Header from "../components/header";
 import Image from "next/image";
 
 import Form from "../components/form";
+import Background from "../components/background";
 
 export default function Contact() {
   return (
@@ -16,20 +17,20 @@ export default function Contact() {
         <link rel="stylesheet" href="https://use.typekit.net/qjb8mfi.css" />
       </Head>
 
-      <main className="bg-black overflow-hidden">
+      <main className="relative bg-black overflow-hidden">
+        <Background />
         <Header />
-        <div className="min-h-screen p-8 px-48">
-          <h1 className="text-3xl font-medium mb-4 text-white">
-            Neem contact met mij op
-          </h1>
-          <p className="mb-8 text-white">
-            Heb jij een vraag of wil je gewoon hallo zeggen? Vul dan dit form
-            uit en we zullen zo snel mogelijk met u in contact komen.
-          </p>
-          <Form />
-        </div>
-
-        <Footer />
+          <div className="relative min-h-screen p-8 px-48 z-10">
+            <h1 className="text-3xl font-medium mb-4 text-white">
+              Neem contact met mij op
+            </h1>
+            <p className="mb-8 text-white">
+              Heb jij een vraag of wil je gewoon hallo zeggen? Vul dan dit form
+              uit en we zullen zo snel mogelijk met u in contact komen.
+            </p>
+            <Form />
+          </div>
+        <Footer /> 
       </main>
 
       <footer></footer>

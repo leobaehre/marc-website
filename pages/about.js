@@ -4,6 +4,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Lul from "../public/lul.jpg";
 import Imaage from "../public/i really nate higgers a lot.png";
+import Background from "../components/background";
 
 export default function About() {
   return (
@@ -15,8 +16,9 @@ export default function About() {
         <link rel="stylesheet" href="https://use.typekit.net/qjb8mfi.css" />
       </Head>
       <main className="bg-black h-screen overflow-hidden">
+        <Background />
         <Header />
-        <div className="grid grid-cols-2 gap-4 pt-6">
+        <div className="relative grid grid-cols-2 gap-4 pt-6">
           <div className="pl-16">
             <h1 className="text-white font-10xl text-6xl font-azo-sans-web pb-8">
               Over Mij
