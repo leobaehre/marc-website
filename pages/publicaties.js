@@ -15,7 +15,42 @@ export default function Publicaties() {
 
       <main className="bg-black overflow-hidden">
         <Header />
-        <h1 class="text-white text-left pt-32 ml-64">Publicaties</h1>
+        <h1 className="text-white text-left pt-32 ml-64 text-4xl">
+          Publicaties
+        </h1>
+
+        <div class="flex justify-center">
+          <a
+            href="publicaties/boek"
+            class="text-white align-center hover:underline ml-2"
+          >
+            Boek
+          </a>
+        </div>
+
+        <div class="flex justify-center">
+          <a href="#" class="text-white align-center hover:underline ml-2">
+            Social media
+          </a>
+        </div>
+
+        <div class="flex justify-center">
+          <a href="#" class="text-white align-center hover:underline ml-2">
+            Vinyls
+          </a>
+        </div>
+
+        <div class="flex justify-center">
+          <a href="#" class="text-white align-center hover:underline ml-2">
+            Expos
+          </a>
+        </div>
+
+        <div class="flex justify-center">
+          <a href="#" class="text-white align-center hover:underline ml-2">
+            Posters
+          </a>
+        </div>
 
         <Footer />
       </main>
