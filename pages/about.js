@@ -4,6 +4,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Lul from "../public/lul.jpg";
 import Imaage from "../public/i really nate higgers a lot.png";
+import Background from "../components/background";
 
 export default function About() {
   return (
@@ -14,41 +15,75 @@ export default function About() {
         <link rel="icon" href="/logo-color.svg" />
         <link rel="stylesheet" href="https://use.typekit.net/qjb8mfi.css" />
       </Head>
-      <main className="bg-black h-screen overflow-hidden">
+      <main className="relative bg-black h-screen overflow-hidden">
+        <Background />
         <Header />
-        <div className="pt-8 pl-16">
-          <h1 className="text-white font-10xl text-6xl font-azo-sans-web">
-            Over Mij
-          </h1>
-        </div>
-        <div className="grid grid-cols-2 px-16">
-          <div ClassName="mt-10">
-            <Image src={Lul} width={500} height={300} alt="a" />
+        <div className="relative h-screen mx-auto container">
+          <div className="relative grid grid-cols-2 gap-4 pt-8">
+            <div>
+              <h1 className="text-white font-azo-sans-web text-6xl pb-4">
+                Over Mij
+              </h1>
+              <p className="text-white font-10xl font-azo-sans-web">
+                VERA has had a group of photographers since 2001. Volunteers
+                make photos of every concert.
+                <br /> Marc de Krosse has been there since the beginning. “I
+                prefer to stand really close to the band.
+                <br /> That’s why I like photographing small concerts in the
+                Kelderbar.
+                <br /> I try to bring the energy of one of those bands back in
+                my photos.
+                <br /> That you see the movement and feel the sweat of the band
+                on the camera.
+                <br /> Like the performance of Loud Squirt.
+                <br /> That was amazing.” “Professional photographers at bigger
+                concerts often <br />
+                have to leave after the third song. We stay for the whole
+                performance, <br />
+                then you also have the sweaty heads at the end.
+                <br /> There’s a lot more going on there than at the beginning.”
+                <br />
+                “We always introduce ourselves to the band and ask for
+                permission to take photos.
+                <br /> In fourteen years I’ve never encountered a band that
+                didn’t want us to.”
+              </p>
+            </div>
+            <div>
+              <div>
+                <h2 className="text-white font-azo-sans-web text-6xl  pb-4">
+                  Over VERA
+                </h2>
+
+                <p className="text-white font-azo-sans-web">
+                  VERA is hét centrum van underground Popcultuur in Groningen,
+                  of zoals wij het graag noemen: Club voor de Internationale Pop
+                  Underground.
+                  <br />
+                  We waren vroeger een studentenvereniging en zo kwamen we aan
+                  onze naam Veri Et Recti Amici (echte en oprechte vrienden).
+                  <br />
+                  Tegenwoordig zijn we een volledig uitgeruste concertzaal waar
+                  veel legendarische bands in hun beginjaren speelden.
+                  <br />
+                  Om er een paar te noemen: U2, Joy Division, Simple Minds, Nick
+                  Cave, Henry Rollins, <br />
+                  Sonic Youth, Soundgarden, Slayer, Nirvana, The White Stripes,
+                  At The Drive-in, Mogwai.
+                </p>
+                <div className="pt-4">
+                  <Image
+                    src={Imaage}
+                    width={453}
+                    height={200}
+                    fill
+                    alt="picture"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div>
-            <h2 className="text-white font-azo-sans-web text-6xl">Over VERA</h2>
-
-            <p className="text-white font-azo-sans-web pt-6 pb-10">
-              VERA is hét centrum van underground Popcultuur in Groningen, of
-              zoals wij het graag noemen: Club voor de Internationale Pop
-              Underground.
-              <br />
-              We waren vroeger een studentenvereniging en zo kwamen we aan onze
-              naam Veri Et Recti Amici (echte en oprechte vrienden).
-              <br />
-              Tegenwoordig zijn we een volledig uitgeruste concertzaal waar veel
-              legendarische bands in hun beginjaren speelden.
-              <br />
-              Om er een paar te noemen: U2, Joy Division, Simple Minds, Nick
-              Cave, Henry Rollins, <br />
-              Sonic Youth, Soundgarden, Slayer, Nirvana, The White Stripes, At
-              The Drive-in, Mogwai.
-            </p>
-            <Image src={Imaage} width={453} height={200} alt="a" />
-          </div>
         </div>
-
         <Footer />
       </main>
     </div>
