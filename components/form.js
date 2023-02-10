@@ -41,9 +41,9 @@ export default function Form() {
         />
       </div>
       <div className="mb-4">
-      <label className="block text-gray-700 font-medium mb-2" htmlFor="email">
-          Email voor antwoord
-      </label>
+        <label className="block text-white font-medium mb-2" htmlFor="email">
+          Email
+        </label>
         <input
           className="border border-white p-2 rounded-lg w-full"
           type="email"
@@ -54,10 +54,7 @@ export default function Form() {
         />
       </div>
       <div className="mb-4">
-        <label
-          className="block text-white font-medium mb-2"
-          htmlFor="message"
-        >
+        <label className="block text-white font-medium mb-2" htmlFor="message">
           Bericht
         </label>
         <textarea

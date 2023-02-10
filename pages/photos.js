@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Background from "../components/background";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
@@ -7,16 +8,14 @@ import Image from "next/image";
 import GalleryBuilder from "../components/gallerybuilder";
 import Slideshow from "../components/slideshow";
 
-import Disk from "../public/music-disk.jpg";
+import Disk from "../public/disk.png";
 
-export default function Gallery() {
+export default function Photos() {
   const disks = [];
 
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 9; i++) {
     disks.push(Disk);
   }
-
-  console.log(disks);
 
   return (
     <div>
@@ -39,29 +38,28 @@ export default function Gallery() {
         ></script>
       </Head>
 
-      <main className="bg-black overflow-hidden">
+      <main className="relative bg-black overflow-hidden h-screen">
+        <Background />
         <Header />
 
-        <div className="pt-6 pl-16">
-          <h1 className="text-white font-10xl text-6xl font-azo-sans-web">
-            Gallerij
-          </h1>
-        </div>
+        <div className="relative mx-auto container pt-8">
+          <div className="pt-6 pl-16">
+            <h1 className="text-white font-10xl text-6xl font-azo-sans-web">
+              Gallerij
+            </h1>
+          </div>
 
-        <div className="grid grid-cols-4 gap-4">
-          {disks.map((value, index) => {
-            return (
-              <>
-                <div className="w-4 h-4"></div>
-                <Image
-                  src={value.src}
-                  alt="disk ${index}"
-                  height={200}
-                  width={200}
-                />
-              </>
-            );
-          })}
+          <div className="mx-auto grid grid-cols-3 pt-8 overflow-hidden w-[45%]">
+            {disks.map((value, index) => {
+              return (
+                <>
+                  <div className="">
+                    <img src={value.src} alt="disk ${index}" />
+                  </div>
+                </>
+              );
+            })}
+          </div>
         </div>
 
         <Footer />
