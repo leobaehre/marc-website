@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import Image1 from "../images/DEF/Former Ghosts, 3-11-2010.jpg"
-import Image2 from "../images/MNO/Major Stars, 06-12-2006,03.jpg"
-import Image3 from "../images/MNO/Moon Duo, 06-05-2011.jpg"
+import Image1 from "../public/images/def/Former Ghosts, 3-11-2010.jpg"
+import Image2 from "../public/images/mno/Major Stars, 06-12-2006,03.jpg"
+import Image3 from "../public/images/mno/Moon Duo, 06-05-2011.jpg"
 
 export default function Slideshow() {
 return (

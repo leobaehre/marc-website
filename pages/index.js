@@ -31,7 +31,6 @@ export default function Home() {
           <Videos />
         </div>
         
-       
         <Footer />
       </main>
 

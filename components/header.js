@@ -60,7 +60,7 @@ export default function Header() {
         </li>
         <li>
           <Link href="gallery">
-            {language === "nl" ? <a>{"Foto's"}</a> : <a>Gallery</a>}
+            {language === "nl" ? <a>{"Foto's"}</a> : <a>Pictures</a>}
           </Link>
         </li>
         <li>
