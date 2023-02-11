@@ -45,24 +45,7 @@ export const getStaticProps = async ({ params }) => {
       if (err) {
         reject(err);
       } else {
-        resolve(
-          files.map(file => {
-            const nameWithoutExtension = file.split('.')[0];
-            let bandName, date;
-            if (nameWithoutExtension.endsWith(')')) {
-              [bandName, date] = nameWithoutExtension
-                .replace(/\(\d+\)$/, '')
-                .split(', ');
-            } else {
-              [bandName, date] = nameWithoutExtension.split(', ');
-            }
-            return {
-              name: file,
-              bandName,
-              date: new Date(date)
-            };
-          })
-        );
+        resolve(files.map(file => ({ name: file })));
       }
     });
   });
