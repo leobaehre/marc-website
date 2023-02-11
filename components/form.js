@@ -58,7 +58,7 @@ export default function Form() {
           Bericht
         </label>
         <textarea
-          className="border border-white p-2 rounded-lg w-full"
+          className="border border-white p-2 rounded-lg w-full max-h-50"
           id="message"
           name="message"
           value={formData.message}
