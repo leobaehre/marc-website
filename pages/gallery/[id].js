@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import React from 'react';
 
+import GalleryImage from '../../components/galleryimage';
+
 const Gallery = ({ folderName, images }) => {
 
   return (
@@ -10,11 +12,7 @@ const Gallery = ({ folderName, images }) => {
       {images && images.length > 0 ? (
         <div className="flex flex-wrap">
           {images.map(image => (
-            <img
-              key={image.name}
-              src={`/images/${folderName}/${image.name}`}
-              className="w-48 h-48 object-cover object-center m-4"
-            />
+            <GalleryImage folderName={folderName} image={image} />
           ))}
         </div>
       ) : (
@@ -37,18 +35,37 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
+
+const fsp = require('fs').promises;
+
 export const getStaticProps = async ({ params }) => {
   const folderName = params.id;
   const folderPath = path.join(process.cwd(), 'public', 'images', folderName);
-  const images = await new Promise((resolve, reject) => {
-    fs.readdir(folderPath, (err, files) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(files.map(file => ({ name: file })));
+
+  let images = [];
+
+  const getImages = async (folder, parent) => {
+    const files = await fsp.readdir(folder);
+    for (const file of files) {
+      const filePath = path.join(folder, file);
+      const stats = await fsp.stat(filePath);
+      if (stats.isDirectory()) {
+        await getImages(filePath, file);
+      } else if (['.jpg', '.jpeg', '.png', '.gif'].includes(path.extname(file).toLowerCase())) {
+
+        var bandName = parent.split(',')[0];
+        var date = parent.split(',')[1];
+
+        images.push({
+            name: parent ? `${parent}/${file}` : file,
+            bandName,
+            date: date,
+          });
       }
-    });
-  });
+    }
+  };
+
+  await getImages(folderPath);
 
   return { props: { folderName, images } };
 };
