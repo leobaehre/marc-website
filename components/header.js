@@ -54,12 +54,12 @@ export default function Header() {
           <Link href="/">{language === "nl" ? <a>Home</a> : <a>Home</a>}</Link>
         </li>
         <li>
-          <Link href="publicaties">
+          <Link href="/publicaties">
             {language === "nl" ? <a>Publicaties</a> : <a>Publications</a>}
           </Link>
         </li>
         <li>
-          <Link href="gallery">
+          <Link href="/gallery">
             {language === "nl" ? <a>{"Foto's"}</a> : <a>Pictures</a>}
           </Link>
         </li>
@@ -69,12 +69,12 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <Link href="about">
+          <Link href="/about">
             {language === "nl" ? <a>Over mij</a> : <a>About</a>}
           </Link>
         </li>
         <li>
-          <Link href="contact" className="Hover:text-red">
+          <Link href="/contact" className="Hover:text-red">
             Contact
           </Link>
         </li>

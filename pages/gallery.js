@@ -17,9 +17,9 @@ export default function About() {
         <Background />
         <Header />
 
-        <div className="relative mx-auto container hide-scrollbar">
-          <h1 className="text-white font-azo-sans-web text-6xl pb-4 pt-4">
-            Gallery
+        <div className="relative mx-auto container pt-8">
+          <h1 className="text-white font-azo-sans-web text-6xl">
+            Gallerij
           </h1>
           <Gallery />
         </div>
