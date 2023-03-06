@@ -31,8 +31,8 @@ const Gallery = ({ folderName, images }) => {
           </h1>
           {images && images.length > 0 ? (
             <div className="grid grid-cols-6 gap-16 pt-4 pb-10">
-              {images.map(image => (
-                <GalleryBand folderName={folderName} image={image} />
+              {images.map((image, index) => (
+                <GalleryBand folderName={folderName} image={image} key={index}/>
               ))}
             </div>
           ) : (

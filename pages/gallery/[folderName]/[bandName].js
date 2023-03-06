@@ -48,7 +48,7 @@ const GalleryBand = ({ folderName, bandName, images }) => {
           {images && images.length > 0 ? (
             <div className="grid grid-cols-6 gap-16 pt-4 pb-10">
               {images.map((image, index) =>  (
-                <GalleryImage folderName={folderName} image={image} onClick={() => {
+                <GalleryImage folderName={folderName} image={image} key={index} onClick={() => {
                   setCurrentImage(index);
                   setIsLightBoxOpen(true);
                 }}/>  
