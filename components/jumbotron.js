@@ -27,7 +27,12 @@ export default function Jumbotron() {
         </div>
         <div className="text-white py-2 text-right">
           <p>
-          Vang de energie en opwinding van live muziek op. <br/> Als concertfotograaf streef ik ernaar om tijd stil te zetten  <br/> en herinneringen vast te leggen van onvergetelijke muzikale belevenissen. <br/> Van de felle lichten op het podium tot de passievollegezichten in het publiek, <br/> elke foto vertelt het verhaal van de vreugde en opwinding van live optredens.
+            Vang de energie en opwinding van live muziek op. <br /> Als
+            concertfotograaf streef ik ernaar om tijd stil te zetten <br /> en
+            herinneringen vast te leggen van onvergetelijke muzikale
+            belevenissen. <br /> Van de felle lichten op het podium tot de
+            passievollegezichten in het publiek, <br /> elke foto vertelt het
+            verhaal van de vreugde en opwinding van live optredens.
           </p>
         </div>
       </div>
