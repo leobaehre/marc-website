@@ -54,7 +54,7 @@ export default function Header() {
           <Link href="/">{language === "nl" ? <a>Home</a> : <a>Home</a>}</Link>
         </li>
         <li>
-          <Link href="/publicaties">
+          <Link href="/publications">
             {language === "nl" ? <a>Publicaties</a> : <a>Publications</a>}
           </Link>
         </li>
